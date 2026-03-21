@@ -1,0 +1,17 @@
+@import "./colors";
+
+body {
+  background-color: $bg-color;
+}
+
+@import "./hero";
+
+@import "./count";
+
+@import "./dest";
+
+@import "./accord";
+
+@import "./echipa";
+
+@import "./vote";

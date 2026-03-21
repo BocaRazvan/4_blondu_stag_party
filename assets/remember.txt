@@ -1,0 +1,12 @@
+new folder styles
+
+styles.scss -> sass compiler
+
+variables / nesting
+
+can separate scss files and then @import (file name with _ in front)
+
+mixin (group some CSS properties & values) -> add them with @include
+
+extensions with @extend
+

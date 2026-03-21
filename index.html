@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--HEAD------------------------------------------------------------------------------------------------------------------------------------>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burlăcia lui Blondu</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity=
+"sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="./styles/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"> 
+</head>
+
+<!--BODY------------------------------------------------------------------------------------------------------------------------------------>
+<body>
+
+<!--HERO------------------------------------------------------------------------------------------------------------------------------------>   
+<div class="hero-container mb-4">
+  <div class="hero-content">
+    <h1 class="hero-text">BURLACIA LUI BLONDU</h1><br>
+    <p class="hero-subText">*ULTIMUL WEEKEND DIN IUNIE!</p>
+  </div>
+</div>
+
+<!--COUNTDOWN------------------------------------------------------------------------------------------------------------------------------------>   
+<div id="countdown" class="countdown-container mb-4">
+  <div class="time-block">
+    <span id="days">00</span>
+    <p>Zile</p>
+  </div>
+  <div class="time-block">
+    <span id="hours">00</span>
+    <p>Ore</p>
+  </div>
+  <div class="time-block">
+    <span id="minutes">00</span>
+    <p>MIN</p>
+  </div>
+  <div class="time-block">
+    <span id="seconds">00</span>
+    <p>SEC</p>
+  </div>
+</div>
+
+<!--ECHIPA---------------------------------------------------------------------------------------------------------------------------------->
+<div class="container mt-2">
+  <div class="airport-board  ">
+    <table class="table table-dark table-hover mb-3">
+      <thead>
+        <tr>
+          <th>Pasager</th>
+          <th>Status</th>
+          <th>Șanse Prezență</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="fw-bold">Blondu</td>
+          <td class="text-success status-cell">CONFIRMED</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Baba</td>
+          <td class="text-success status-cell">CONFIRMED</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Slim</td>
+          <td class="text-success status-cell">CONFIRMED</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Coco</td>
+          <td class="text-success status-cell">CONFIRMED</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Pido</td>
+          <td class="text-success status-cell">CONFIRMED</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Denis</td>
+          <td class="text-success status-cell">CONFIRMED</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Danezu</td>
+          <td class="text-danger status-cell">CANCELLED</td>
+          <td>
+            <div class="star-rating">
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Eugen</td>
+          <td class="text-warning status-cell">IN ASTEPTARE</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Horatiu</td>
+          <td class="text-success status-cell">CONFIRMED</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Bebe</td>
+          <td class="text-success status-cell">CONFIRMED</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Mircu</td>
+          <td class="text-success status-cell">CONFIRMED</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Nas 1</td>
+          <td class="text-warning status-cell">IN ASTEPTARE</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Nas 2</td>
+          <td class="text-warning status-cell">IN ASTEPTARE</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Pascu</td>
+          <td class="text-danger status-cell">CANCELLED</td>
+          <td>
+            <div class="star-rating">
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Ciucas</td>
+          <td class="text-success status-cell">CONFIRMED</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Paul M.</td>
+          <td class="text-success status-cell">CONFIRMED</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Tyku</td>
+          <td class="text-warning status-cell">IN ASTEPTARE</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Bralin</td>
+          <td class="text-success status-cell">CONFIRMED</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-bold">Sorin</td>
+          <td class="text-success status-cell">CONFIRMED</td>
+          <td>
+            <div class="star-rating">
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+              <span class="checked">★</span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+<tfoot>
+  <tr class="fw-bold" style="border-top: 3px solid #ffffff;">
+    <td >TOTAL PASAGERI: 19</td>
+    <td class="text-info">
+      <div class="d-flex flex-column" style="font-size: 1rem;">
+        <span class="text-success">CONFIRMED: 12</span>
+        <span class="text-warning">WAITING: 5</span>
+        <span class="text-danger">CANCELLED: 2</span>
+      </div>
+    </td>
+    <td></td>
+  </tr>
+</tfoot>
+    </table>
+  </div>
+</div>
+
+
+<!--LOCATII---------------------------------------------------------------------------------------------------------------------------------->
+<h1 class="myH mb-3">DESTINATII <i class="bi bi-airplane"></i></h1>
+
+<!--ACCORDION---------------------------------------------------------------------------------------------------------------------------------->
+<div class="accordion  container " id="accordDestinatii">
+
+<!--BENI---------------------------------------------------------------------------------------------------------------------------------->
+<div class="accordion-item mb-3">
+  <h2 class="accordion-header p">
+    <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+      <strong>Alicante (Benidorm)</strong>
+    </button>
+  </h2>
+  <div id="collapseOne" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8">
+          <img src="./assets/beni.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-12 col-md-4">
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor dus:</strong></span>
+              <span>Vineri, 16:30</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor retur:</strong></span>
+              <span>Luni, 20:00</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Tip:</strong></span>
+              <span class="badge bg-info text-dark fs-6">Beach + Urban</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Party:</strong></span>
+              <span class=" fs-4 ">🍺 🍺 🍺</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Buget:</strong></span>
+              <span class="badge bg-success fs-6 pulse">💰</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--ANTA---------------------------------------------------------------------------------------------------------------------------------->
+<div class="accordion-item mb-3">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+      <strong>Antalya</strong>
+    </button>
+  </h2>
+  <div id="collapseTwo" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8">
+          <img src="./assets/anta.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-12 col-md-4">
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor dus:</strong></span>
+              <span>Vineri, 14:00</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor retur:</strong></span>
+              <span>Luni, 16:45</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Tip:</strong></span>
+              <span class="badge bg-info text-dark fs-6">Beach + Urban</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Party:</strong></span>
+              <span class=" fs-4 ">🍺 🍺</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Buget:</strong></span>
+              <span class="badge bg-success fs-6 pulse">💰</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--BARCA---------------------------------------------------------------------------------------------------------------------------------->
+<div class="accordion-item mb-3">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+      <strong>Barcelona</strong>
+    </button>
+  </h2>
+  <div id="collapseThree" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8">
+          <img src="./assets/barca.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-12 col-md-4">
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor dus:</strong></span>
+              <span>Zilnic, 18:25</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor retur:</strong></span>
+              <span>Zilnic, 21:15</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Tip:</strong></span>
+              <span class="badge bg-info text-dark fs-6">Beach + Urban</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Party:</strong></span>
+              <span class=" fs-4 ">🍺 🍺 🍺</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Buget:</strong></span>
+              <span class="badge bg-warning fs-6 pulse">💰 💰</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--BERLIN---------------------------------------------------------------------------------------------------------------------------------->
+<div class="accordion-item mb-3">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+      <strong>Berlin</strong>
+    </button>
+  </h2>
+  <div id="collapseFour" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8">
+          <img src="./assets/berlin.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-12 col-md-4">
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor dus:</strong></span>
+              <span>Sambata, 06:45</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor retur:</strong></span>
+              <span>Marti, 08:15</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Tip:</strong></span>
+              <span class="badge bg-info text-dark fs-6">Urban</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Party:</strong></span>
+              <span class=" fs-4 ">🍺 🍺 🍺</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Buget:</strong></span>
+              <span class="badge bg-warning fs-6 pulse">💰 💰</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--CASTELLON---------------------------------------------------------------------------------------------------------------------------------->
+<div class="accordion-item mb-3">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+      <strong>Castellon</strong>
+    </button>
+  </h2>
+  <div id="collapseFive" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8">
+          <img src="./assets/caste.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-12 col-md-4">
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor dus:</strong></span>
+              <span>Sambata, 11:40</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor retur:</strong></span>
+              <span>Marti, 14:35</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Tip:</strong></span>
+              <span class="badge bg-info text-dark fs-6">Beach + Urban</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Party:</strong></span>
+              <span class=" fs-4 ">🍺</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Buget:</strong></span>
+              <span class="badge bg-warning fs-6 pulse">💰 💰</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--CATANIA---------------------------------------------------------------------------------------------------------------------------------->
+<div class="accordion-item mb-3">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+      <strong>Catania</strong>
+    </button>
+  </h2>
+  <div id="collapseSix" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8">
+          <img src="./assets/catania.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-12 col-md-4">
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor dus:</strong></span>
+              <span>Sambata, 20:15</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor retur:</strong></span>
+              <span>Marti, 22:10</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Tip:</strong></span>
+              <span class="badge bg-info text-dark fs-6">Beach + Urban</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Party:</strong></span>
+              <span class=" fs-4 ">🍺</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Buget:</strong></span>
+              <span class="badge bg-success fs-6 pulse">💰</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--DUBROVNIK---------------------------------------------------------------------------------------------------------------------------------->
+<div class="accordion-item mb-3">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+      <strong>Dubrovnik</strong>
+    </button>
+  </h2>
+  <div id="collapseSeven" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8">
+          <img src="./assets/dubrovnik.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-12 col-md-4">
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor dus:</strong></span>
+              <span>Sambata, 06:45</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor retur:</strong></span>
+              <span>Marti, 07:55</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Tip:</strong></span>
+              <span class="badge bg-info text-dark fs-6">Beach + Urban</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Party:</strong></span>
+              <span class=" fs-4 ">🍺 🍺</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Buget:</strong></span>
+              <span class="badge bg-warning fs-6 pulse">💰 💰</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--CRETA---------------------------------------------------------------------------------------------------------------------------------->
+<div class="accordion-item mb-3">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+      <strong>Creta</strong>
+    </button>
+  </h2>
+  <div id="collapseEight" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8">
+          <img src="./assets/crete.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-12 col-md-4">
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor dus:</strong></span>
+              <span>Sambata, 05:50</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor retur:</strong></span>
+              <span>Marti, 08:35</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Tip:</strong></span>
+              <span class="badge bg-info text-dark fs-6">Beach + Urban</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Party:</strong></span>
+              <span class=" fs-4 ">🍺</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Buget:</strong></span>
+              <span class="badge bg-success fs-6 pulse">💰</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--LISABONA---------------------------------------------------------------------------------------------------------------------------------->
+<div class="accordion-item mb-3">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+      <strong>Lisabona</strong>
+    </button>
+  </h2>
+  <div id="collapseNine" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8">
+          <img src="./assets/lisabona.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-12 col-md-4">
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor dus:</strong></span>
+              <span>Joi, 15:05</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor retur:</strong></span>
+              <span>Duminica, 18:20</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Tip:</strong></span>
+              <span class="badge bg-info text-dark fs-6">Beach + Urban</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Party:</strong></span>
+              <span class=" fs-4 ">🍺 🍺</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Buget:</strong></span>
+              <span class="badge bg-warning fs-6 pulse">💰 💰</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--LONDRA---------------------------------------------------------------------------------------------------------------------------------->
+<div class="accordion-item mb-3">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">
+      <strong>Londra</strong>
+    </button>
+  </h2>
+  <div id="collapseTen" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8">
+          <img src="./assets/londra.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-12 col-md-4">
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor dus:</strong></span>
+              <span>Zilnic, 06:15 / 19:55</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor retur:</strong></span>
+              <span>Zilnic, 08:15 / 21:45</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Tip:</strong></span>
+              <span class="badge bg-info text-dark fs-6">Urban</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Party:</strong></span>
+              <span class=" fs-4 ">🍺 🍺 🍺</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Buget:</strong></span>
+              <span class="badge bg-danger fs-6 pulse">💰 💰 💰</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--MALTA---------------------------------------------------------------------------------------------------------------------------------->
+<div class="accordion-item mb-3">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven">
+      <strong>Malta</strong>
+    </button>
+  </h2>
+  <div id="collapseEleven" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8">
+          <img src="./assets/malta.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-12 col-md-4">
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor dus:</strong></span>
+              <span>Vineri, 19:45</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor retur:</strong></span>
+              <span>Luni, 21:40</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Tip:</strong></span>
+              <span class="badge bg-info text-dark fs-6">Urban + Beach</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Party:</strong></span>
+              <span class=" fs-4 ">🍺 🍺</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Buget:</strong></span>
+              <span class="badge bg-warning fs-6 pulse">💰 💰</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--VALENCIA---------------------------------------------------------------------------------------------------------------------------------->
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve">
+      <strong>Valencia</strong>
+    </button>
+  </h2>
+  <div id="collapseTwelve" class="accordion-collapse collapse">
+    <div class="accordion-body">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8">
+          <img src="./assets/valencia.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-12 col-md-4">
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor dus:</strong></span>
+              <span>Joi, 18:00</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Zbor retur:</strong></span>
+              <span>Duminica, 20:20</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Tip:</strong></span>
+              <span class="badge bg-info text-dark fs-6">Urban + Beach</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Party:</strong></span>
+              <span class=" fs-4 ">🍺 🍺</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0 mb-md-4">
+              <span><strong>Buget:</strong></span>
+              <span class="badge bg-warning fs-6 pulse">💰 💰</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<small class="text-muted fs-6"><i>*Organizatorii isi rezerva dreptul de a modifica lista. </i><i
+    class="bi bi-emoji-sunglasses-fill"></i></small>
+</div>
+
+<!--VOTARE---------------------------------------------------------------------------------------------------------------------------------->
+<section class="container my-5">
+  <div class="card shadow-lg border-0 overflow-hidden">
+    <div class="row g-0">
+      <div class="col-md-4 d-flex align-items-center p-5 myVote1">
+        <div>
+          <h2 class="display-5 fw-bold mb-2">Voteaza destinatia!</h2>
+          <p class="lead mb-3">Unde ai vrea sa mergem?<br>Ajuta-ne sa decidem!<br>Citeste regulamentul si exprima-te!
+          </p>
+          <button class="btn btn-primary btn-lg w-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#voteModal">Voteaza acum</button>
+        </div>
+      </div>
+      <div class="col-md-8 bg-light p-4 myVote2">
+        <h2 class="fw-bold text-dark">Regulament si conditii:</h2>
+        <ul class="list-unstyled mt-2">
+          <li class="mb-2 d-flex align-items-start">
+            <i class="bi bi-check-circle-fill text-success me-3 "></i>
+            <span>Esti pe lista de invitati.</span>
+          </li>
+          <li class="mb-2 d-flex align-items-start">
+            <i class="bi bi-check-circle-fill text-success me-3 "></i>
+            <span>Ai confirmat participarea (sau ai sanse mari sa vii).</span>
+          </li>
+          <li class="mb-2 d-flex align-items-start">
+            <i class="bi bi-check-circle-fill text-success me-3 "></i>
+            <span>Ai primit de la organizatori <strong>codul de vot</strong>. Acesta este unic. Un cod = un vot.
+              Codul este secret. Nu il dezvalui nimanui. Nu lasa pe altii sa voteze in numele tau.</span>
+          </li>
+          <li class="mb-2 d-flex align-items-start">
+            <i class="bi bi-check-circle-fill text-success me-3 "></i>
+            <span>Ai un singur vot. Poti vota doar o data. Votul nu poate fi modificat dupa ce a fost trimis.</span>
+          </li>
+          <li class="mb-2 d-flex align-items-start">
+            <i class="bi bi-check-circle-fill text-success me-3 "></i>
+            <span>Votarea se inchide la data de 31 martie 2026, ora 22:00.</span>
+          </li>
+        </ul>
+        <hr class="my-4">
+        <p class="text-muted"><i>Nu ai primit codul de vot sau ai alte întrebări, contactează organizatorii. Sau lasa un
+            mesaj in formularul de
+            mai jos.<br>Multumim pentru participare!</i> <i class="bi bi-emoji-smile-fill"></i></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--MODAL-------------------------------------------------------------------------------------------------------------------------------------->
+<div class="modal fade" id="voteModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="voteModalLabel">Introdu cod si voteaza!</h5>
+        <button type="button" class="btn-close fs-2" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="voteForm">
+          <div class="mb-3">
+            <label for="voteCode" class="form-label">Cod Unic</label>
+            <input type="text" class="form-control" id="voteCode" placeholder="Ex: ABC-123" required>
+          </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Destinația preferată</label>
+<select class="form-select form-select-lg">
+  <option selected disabled>Unde mergem?</option>
+  <optgroup label="Beach & Party 🏖️">
+    <option value="1">Alicante (Benidorm)</option>
+    <option value="2">Antalya</option>
+    <option value="8">Creta</option>
+    <option value="11">Malta</option>
+  </optgroup>
+  <optgroup label="City & Culture 🍺">
+    <option value="3">Barcelona</option>
+    <option value="4">Berlin</option>
+    <option value="9">Lisabona</option>
+    <option value="10">Londra</option>
+    <option value="12">Valencia</option>
+  </optgroup>
+  <optgroup label="Scenic & Chill 🌊">
+    <option value="5">Castellon</option>
+    <option value="6">Catania</option>
+    <option value="7">Dubrovnik</option>
+  </optgroup>
+</select>
+          </div>
+
+<div id="voteMessage" class="d-none p-3 mb-3 rounded-3 fw-bold text-center"></div>
+
+<div class="mb-3">
+  <label for="voteCode" class="form-label">Cod Unic</label>
+
+
+          <button type="submit" class="btn btn-primary w-100">Trimite Votul</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--JS-------------------------------------------------------------------------------------------------------------------------------------->
+<!--JS-------------------------------------------------------------------------------------------------------------------------------------->
+<!--JS-------------------------------------------------------------------------------------------------------------------------------------->
+<!--JS-------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!--BOOSTRAP JS----------------------------------------------------------------------------------------------------------------------------->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity=
+"sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+</script>
+
+<!--COUNTDOWN JS----------------------------------------------------------------------------------------------------------------------------->
+<script>
+(function() {
+    // Target: June 25, 2026, 6:00 AM
+    const target = new Date("2026-06-25T06:00:00").getTime();
+
+    function runTimer() {
+        const now = new Date().getTime();
+        const diff = target - now;
+
+        const dEl = document.getElementById("days");
+        const hEl = document.getElementById("hours");
+        const mEl = document.getElementById("minutes");
+        const sEl = document.getElementById("seconds");
+
+        // If elements aren't ready, wait a frame
+        if (!dEl) { 
+            window.requestAnimationFrame(runTimer);
+            return; 
+        }
+
+        if (diff <= 0) {
+            document.getElementById("countdown").innerHTML = "LET'S PARTY!";
+            return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        dEl.textContent = String(d).padStart(2, '0');
+        hEl.textContent = String(h).padStart(2, '0');
+        mEl.textContent = String(m).padStart(2, '0');
+        sEl.textContent = String(s).padStart(2, '0');
+    }
+
+    setInterval(runTimer, 1000);
+    runTimer(); // Run once immediately
+})();
+</script>
+
+<!--ANIMATE COLUMN 2 JS------------------------------------------------------------------------------------------------------------------------>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cells = document.querySelectorAll('.status-cell');
+  
+  // Store the original text for each cell
+  const originalTexts = Array.from(cells).map(cell => cell.textContent);
+
+  function typeEffect(element, text, speed = 100) {
+    element.textContent = "";
+    let i = 0;
+    const timer = setInterval(() => {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+      } else {
+        clearInterval(timer);
+      }
+    }, speed);
+  }
+
+  function refreshBoard() {
+    cells.forEach((cell, index) => {
+      typeEffect(cell, originalTexts[index]);
+    });
+  }
+
+  // Initial trigger and then every 5 seconds
+  refreshBoard();
+  setInterval(refreshBoard, 4500); 
+});
+</script>
+
+<!--VOTE SUPA------------------------------------------------------------------------------------------------------------------------->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+  // 2. Initialize Supabase
+  const SUPABASE_URL = 'https://hzwarfzfdcrgrugvbxjm.supabase.co';
+  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6d2FyZnpmZGNyZ3J1Z3ZieGptIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwMjg1NjksImV4cCI6MjA4OTYwNDU2OX0.8H9jZ_AbH8WFfcM2CRVXrzAnFZDZnU1zbMm7W4YVxvo'; // Your key here
+  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+  const voteForm = document.getElementById('voteForm');
+
+  voteForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Get values from the UI
+    const codeInput = document.getElementById('voteCode').value.trim();
+    const destination = document.querySelector('.form-select').value;
+
+    // Basic UI Validation
+    if (!destination || destination === "Unde mergem?") {
+      alert("Te rugăm să alegi o destinație!");
+      return;
+    }
+
+    try {
+      // 3. Attempt to vote
+      const { data, error } = await supabaseClient
+        .from('votes')
+        .insert([{ 
+          voter_code: codeInput, 
+          destination_id: parseInt(destination) 
+        }]);
+
+      // 4. Handle Results
+      if (error) {
+        if (error.code === '23503') { 
+          // Foreign Key Violation (Code not in valid_codes table)
+          alert("❌ Cod invalid! Te rugăm să verifici codul primit.");
+        } else if (error.code === '23505') { 
+          // Unique Constraint (Code already in votes table)
+          alert("⚠️ Acest cod a fost deja folosit. O singură participare permisă!");
+        } else {
+          alert("Eroare: " + error.message);
+        }
+        console.error("Supabase Error:", error);
+      } else {
+        // Success!
+        alert("✅ Vot înregistrat cu succes! Ne vedem la party! 🍻");
+        
+        voteForm.reset();
+        
+        // Close Bootstrap Modal
+        const modalElement = document.getElementById('voteModal');
+        const modalInstance = bootstrap.Modal.getInstance(modalElement);
+        if (modalInstance) {
+          modalInstance.hide();
+        }
+      }
+    } catch (err) {
+      console.error("Unexpected Error:", err);
+      alert("A apărut o eroare neprevăzută.");
+    }
+  });
+</script>
+
+</body>
+</html>

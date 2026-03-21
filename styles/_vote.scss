@@ -1,0 +1,35 @@
+.myVote1 {
+  background-color: $p-color;
+  color: $s-color;
+}
+
+.myVote2 {
+  
+  color: $p-color;
+}
+
+
+/* Custom Modal Styling */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+    background-color: $bg-color; /* Use your brand color */
+    color: $p-color; /* Contrasting text color */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.btn-primary {
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+}

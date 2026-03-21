@@ -1,0 +1,37 @@
+@keyframes pulse {
+    0% { transform: scale(0.8); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.9; }
+    100% { transform: scale(0.8); opacity: 1; }
+  } 
+
+  .pulse {
+    animation: pulse 4s infinite ease-in-out;
+    display: inline-block; /* Asigură că animația de scalare funcționează corect */
+  }
+
+/* Reduce space between the accordion boxes */
+#accordDestinatii .accordion-item {
+    margin-bottom: 1rem !important; /* Overrides your mb-3 */
+}
+
+/* Reduce internal padding of the content */
+#accordDestinatii .accordion-body {
+    padding: 1rem; 
+}
+
+/* Reduce padding of the header button */
+#accordDestinatii .accordion-button {
+    padding: 10px 25px 10px 25px;
+}
+
+
+
+#accordDestinatii .accordion-item:hover {
+    transform: translateY(-1px); /* Lifts the item slightly */
+}
+
+/* Optional: Subtle background change for the header on hover */
+#accordDestinatii .accordion-header:hover .accordion-button {
+    color: #0d6efd;
+}
+

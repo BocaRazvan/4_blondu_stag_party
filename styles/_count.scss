@@ -1,0 +1,47 @@
+.countdown-container {
+  display: flex;
+  gap: 40px;            /* More space between blocks for elegance */
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-block span {
+  font-family: 'serif', 'Playfair Display', Georgia; /* Elegant serif for numbers */
+  font-size: 3rem;
+  font-weight: 500;
+  color: $p-color;
+  line-height: 1;
+}
+
+.time-block p {
+  font-family: 'sans-serif', 'Montserrat', Arial; /* Modern sans-serif for labels */
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 3px;   /* Wide tracking is very modern */
+  text-transform: uppercase;
+  color: #434343;
+  margin-top: 8px;
+}
+
+.time-block::after {
+  content: '';
+  position: absolute;
+  width: 0;                 /* Start at 0 width (invisible) */
+  height: 1px;              /* Thickness of the underline */
+  bottom: 50;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;  /* Change to your preferred color */
+  transition: width 0.3s ease; /* This makes it animate smoothly */
+}
+
+/* When the mouse hovers over the text, grow the underline */
+.time-block:hover::after {
+  width: 25%;
+}

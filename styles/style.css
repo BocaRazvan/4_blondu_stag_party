@@ -1,0 +1,367 @@
+@charset "UTF-8";
+body {
+  background-color: #c0bd8e;
+}
+
+.hero-container {
+  /* Set your background image here */
+  background-size: cover;
+  /* Ensures image covers entire area (like object-fit: cover) */
+  background-position: center;
+  /* Centers the image */
+  background-repeat: no-repeat;
+  position: relative;
+  /* Essential for text positioning */
+  width: 100%;
+  height: 75vh;
+  /* Adjust height as needed */
+  animation: heroFade 14s ease-in-out infinite;
+  transition: background-image 2s ease-in-out;
+}
+
+@keyframes heroFade {
+  0%, 20% {
+    background-image: linear-gradient(to bottom, transparent 10%, rgb(0, 0, 0) 100%), url("../assets/hero-1.jpg");
+  }
+  30%, 55% {
+    background-image: linear-gradient(to bottom, transparent 10%, rgb(0, 0, 0) 100%), url("../assets/hero-2.jpg");
+  }
+  63%, 80% {
+    background-image: linear-gradient(to bottom, transparent 10%, rgb(0, 0, 0) 100%), url("../assets/hero-3.jpg");
+  }
+  85%, 100% {
+    background-image: linear-gradient(to bottom, transparent 10%, rgb(0, 0, 0) 100%), url("../assets/hero-4.jpg");
+  }
+}
+/* --- The Mobile/Height Fix (Integrated) --- */
+/* Set a fixed height for mobile */
+@media (max-width: 767px) {
+  .hero-container {
+    height: 65vh;
+    /* Adjust this to your liking */
+  }
+}
+/* Standard text positioning (centers the content) */
+.hero-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* This combo centers vertically and horizontally */
+  text-align: center;
+  width: 80%;
+  /* Keeps text from hitting the very edges */
+}
+
+/* Optional styling for the text */
+.hero-text {
+  color: goldenrod;
+  /* Text color */
+  font-size: 3rem;
+  /* Large font size */
+  font-weight: bold;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  /* Adds a shadow for readability */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.707), rgba(0, 0, 0, 0.904)), url("./assets/hero-1.jpg");
+  display: inline-block;
+  border-radius: 50px;
+  /* High value makes it look like a pill */
+  padding: 25px 25px;
+  border: 1px solid #002147;
+  /* This is the default, but you can specify it */
+  letter-spacing: 3px;
+}
+
+/* Create the underline as a "ghost" element */
+.hero-text::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  /* Start at 0 width (invisible) */
+  height: 2px;
+  /* Thickness of the underline */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  /* Change to your preferred color */
+  transition: width 0.3s ease;
+  /* This makes it animate smoothly */
+}
+
+/* When the mouse hovers over the text, grow the underline */
+.hero-text:hover::after {
+  width: 25%;
+}
+
+@media (max-width: 767px) {
+  .hero-text {
+    font-size: 1.5rem;
+    /* Adjust font size for mobile */
+  }
+}
+.hero-subText {
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-shadow: 0 0 5px #d23aac, 0 0 0px #00ffff, 0 0 5px #ff00ff;
+  /* Soft outer glow (Magenta) */
+  /* 3. Keep your structural layout */
+  display: inline-block;
+  padding: 10px 25px;
+  /* Optional: Add a subtle border that also glows */
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  box-shadow: 0 0 7px rgba(0, 255, 255, 0.3);
+}
+
+@media (max-width: 767px) {
+  .hero-subText {
+    font-size: 1rem;
+    /* Slightly reduce glow on mobile to prevent 'blurring' the text */
+    text-shadow: 0 0 5px #fff, 0 0 10px #00ffff, 0 0 20px #ff00ff;
+    /* Soft outer glow (Magenta) */
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+}
+.countdown-container {
+  display: flex;
+  gap: 40px; /* More space between blocks for elegance */
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-block span {
+  font-family: "serif", "Playfair Display", Georgia; /* Elegant serif for numbers */
+  font-size: 3rem;
+  font-weight: 500;
+  color: #002147;
+  line-height: 1;
+}
+
+.time-block p {
+  font-family: "sans-serif", "Montserrat", Arial; /* Modern sans-serif for labels */
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 3px; /* Wide tracking is very modern */
+  text-transform: uppercase;
+  color: #434343;
+  margin-top: 8px;
+}
+
+.time-block::after {
+  content: "";
+  position: absolute;
+  width: 0; /* Start at 0 width (invisible) */
+  height: 1px; /* Thickness of the underline */
+  bottom: 50;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black; /* Change to your preferred color */
+  transition: width 0.3s ease; /* This makes it animate smoothly */
+}
+
+/* When the mouse hovers over the text, grow the underline */
+.time-block:hover::after {
+  width: 25%;
+}
+
+.myH {
+  text-align: center;
+  color: #002147;
+}
+
+.myLoc {
+  background-color: goldenrod;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+}
+.pulse {
+  animation: pulse 4s infinite ease-in-out;
+  display: inline-block; /* Asigură că animația de scalare funcționează corect */
+}
+
+/* Reduce space between the accordion boxes */
+#accordDestinatii .accordion-item {
+  margin-bottom: 1rem !important; /* Overrides your mb-3 */
+}
+
+/* Reduce internal padding of the content */
+#accordDestinatii .accordion-body {
+  padding: 1rem;
+}
+
+/* Reduce padding of the header button */
+#accordDestinatii .accordion-button {
+  padding: 10px 25px 10px 25px;
+}
+
+#accordDestinatii .accordion-item:hover {
+  transform: translateY(-1px); /* Lifts the item slightly */
+}
+
+/* Optional: Subtle background change for the header on hover */
+#accordDestinatii .accordion-header:hover .accordion-button {
+  color: #0d6efd;
+}
+
+/* Target the table and its cells directly to override Bootstrap */
+.airport-board .table {
+  background-color: #1a1a1a !important;
+  color: #ffc107 !important; /* Aviation Yellow */
+  font-family: "Courier New", Courier, monospace;
+  border: 5px solid #333;
+  table-layout: fixed; /* Forces columns to respect set widths */
+  width: 100%;
+}
+
+/* Ensure the text inside the cells also follows the color */
+.airport-board .table td,
+.airport-board .table th {
+  color: #109fa6;
+  border-color: #ffffff;
+}
+
+/* Specific style for headers to keep them grey as you intended */
+.airport-board thead th {
+  color: #ffffff !important;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.airport-board .table td {
+  font-size: 1rem;
+}
+
+/* Keep your star styles as they were */
+.star-rating {
+  color: #444;
+  font-size: 1rem;
+}
+
+.star-rating .checked {
+  color: #ffc107; /* The base yellow */
+  text-shadow: 0 0 5px #ffc107, 0 0 10px #ffc107, 0 0 20px #ff8800; /* Outer orange-tinted bloom */
+  filter: brightness(1.2); /* Makes the color "pop" */
+}
+
+/* Mobile Optimizations (Screens smaller than 768px) */
+@media (max-width: 767px) {
+  /* 1. Shrink the overall table text */
+  .airport-board .table {
+    font-size: 0.85rem !important; /* Smaller base font */
+  }
+  /* 2. Scale down the Headers */
+  .airport-board thead th {
+    font-size: 0.8rem !important;
+    padding: 4px 2px !important;
+  }
+  /* 3. Re-adjust column widths for tight spaces */
+  .airport-board .table th:nth-child(1),
+  .airport-board .table td:nth-child(1) {
+    width: 40%; /* Name column gets the most space */
+  }
+  .airport-board .table th:nth-child(2),
+  .airport-board .table td:nth-child(2) {
+    width: 100px !important; /* Status column shrinks */
+  }
+  .airport-board .table th:nth-child(3),
+  .airport-board .table td:nth-child(3) {
+    width: 80px !important; /* Star column shrinks */
+  }
+  /* 4. Shrink the stars so they stay on one line */
+  .star-rating {
+    font-size: 0.75rem !important;
+    letter-spacing: 0px !important;
+  }
+  /* 5. Reduce padding inside cells to save horizontal space */
+  .airport-board .table td,
+  .airport-board .table th {
+    padding: 5px 2px !important;
+  }
+}
+/* Styling for the summary footer */
+.airport-board tfoot td {
+  background-color: #292315 !important;
+  vertical-align: middle;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+/* Ensure mobile responsiveness for the footer */
+@media (max-width: 767px) {
+  .airport-board tfoot td {
+    font-size: 0.9rem !important;
+  }
+}
+@media (min-width: 992px) {
+  /* Set all columns to 1/3 width */
+  .airport-board .table th,
+  .airport-board .table td {
+    width: 33.33% !important;
+    text-align: center; /* Center Status and Stars */
+    vertical-align: middle;
+  }
+  /* Specifically force the first column (Pasager) to stay left-aligned */
+  .airport-board .table th:first-child,
+  .airport-board .table td:first-child {
+    text-align: left !important;
+    padding-left: 20px !important; /* Optional: adds a little breathing room from the edge */
+  }
+}
+.myVote1 {
+  background-color: #002147;
+  color: goldenrod;
+}
+
+.myVote2 {
+  color: #002147;
+}
+
+/* Custom Modal Styling */
+.modal-content {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: #c0bd8e; /* Use your brand color */
+  color: #002147; /* Contrasting text color */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.btn-primary {
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,144 @@
+.hero-container {
+  /* Set your background image here */
+
+  background-size: cover;
+  /* Ensures image covers entire area (like object-fit: cover) */
+  background-position: center;
+  /* Centers the image */
+  background-repeat: no-repeat;
+  position: relative;
+  /* Essential for text positioning */
+  width: 100%;
+  height: 75vh;
+  /* Adjust height as needed */
+  animation: heroFade 14s ease-in-out infinite;
+  transition: background-image 2s ease-in-out;
+}
+
+@keyframes heroFade {
+  0%, 20% {
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0,0,0,1) 100%), 
+                      url('../assets/hero-1.jpg');
+  }
+  30%, 55% {
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0,0,0,1) 100%), 
+                      url('../assets/hero-2.jpg');
+  }
+  63%, 80% {
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0,0,0,1) 100%), 
+                      url('../assets/hero-3.jpg');
+  }
+  85%,100% {
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0,0,0,1) 100%), 
+                      url('../assets/hero-4.jpg');
+  }
+}
+
+/* --- The Mobile/Height Fix (Integrated) --- */
+/* Set a fixed height for mobile */
+@media (max-width: 767px) {
+  .hero-container {
+    height: 65vh;
+    /* Adjust this to your liking */
+  }
+}
+
+/* Standard text positioning (centers the content) */
+.hero-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* This combo centers vertically and horizontally */
+  text-align: center;
+  width: 80%;
+  /* Keeps text from hitting the very edges */
+}
+
+/* Optional styling for the text */
+.hero-text {
+  color: $s-color;
+  /* Text color */
+  font-size: 3rem;
+  /* Large font size */
+  font-weight: bold;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  /* Adds a shadow for readability */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.707), rgba(0, 0, 0, 0.904)), url('./assets/hero-1.jpg');
+  display: inline-block;
+  border-radius: 50px;
+  /* High value makes it look like a pill */
+  padding: 25px 25px;
+  border: 1px solid $p-color;
+  /* This is the default, but you can specify it */
+  letter-spacing: 3px;
+
+}
+
+/* Create the underline as a "ghost" element */
+.hero-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  /* Start at 0 width (invisible) */
+  height: 2px;
+  /* Thickness of the underline */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  /* Change to your preferred color */
+  transition: width 0.3s ease;
+  /* This makes it animate smoothly */
+}
+
+/* When the mouse hovers over the text, grow the underline */
+.hero-text:hover::after {
+  width: 25%;
+}
+
+@media (max-width: 767px) {
+  .hero-text {
+    font-size: 1.5rem;
+    /* Adjust font size for mobile */
+  }
+}
+
+.hero-subText {
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-shadow:
+  0 0 5px #d23aac,
+  /* Core light */
+  0 0 0px #00ffff,
+  /* Primary glow (Cyan) */
+  0 0 5px #ff00ff;
+  /* Soft outer glow (Magenta) */
+  /* 3. Keep your structural layout */
+  display: inline-block;
+  padding: 10px 25px;
+  /* Optional: Add a subtle border that also glows */
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  box-shadow: 0 0 7px rgba(0, 255, 255, 0.3);
+}
+
+@media (max-width: 767px) {
+  .hero-subText {
+    font-size: 1rem;
+    /* Slightly reduce glow on mobile to prevent 'blurring' the text */
+    text-shadow:
+      0 0 5px #fff,
+      /* Core light */
+      0 0 10px #00ffff,
+      /* Primary glow (Cyan) */
+      0 0 20px #ff00ff;
+    /* Soft outer glow (Magenta) */
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+}

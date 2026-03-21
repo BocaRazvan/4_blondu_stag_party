@@ -1,0 +1,119 @@
+/* Target the table and its cells directly to override Bootstrap */
+.airport-board .table {
+    background-color: #1a1a1a !important;
+    color: #ffc107 !important; /* Aviation Yellow */
+    font-family: 'Courier New', Courier, monospace;
+    border: 5px solid #333;
+    table-layout: fixed; /* Forces columns to respect set widths */
+    width: 100%;
+}
+
+/* Ensure the text inside the cells also follows the color */
+.airport-board .table td, 
+.airport-board .table th {
+    color: #109fa6; 
+    border-color: #ffffff;
+}
+
+/* Specific style for headers to keep them grey as you intended */
+.airport-board thead th {
+    color: #ffffff !important;
+    text-transform: uppercase;
+        font-size: 1rem;
+
+}
+
+.airport-board .table td {
+    font-size: 1rem;
+}
+
+/* Keep your star styles as they were */
+.star-rating {
+    color: #444;
+    font-size: 1rem;
+}
+
+.star-rating .checked {
+    color: #ffc107; /* The base yellow */
+    text-shadow: 
+        0 0 5px  #ffc107,  /* Core glow */
+        0 0 10px #ffc107,  /* Mid-range glow */
+        0 0 20px #ff8800;  /* Outer orange-tinted bloom */
+    filter: brightness(1.2); /* Makes the color "pop" */
+}
+
+
+/* Mobile Optimizations (Screens smaller than 768px) */
+@media (max-width: 767px) {
+    
+    /* 1. Shrink the overall table text */
+    .airport-board .table {
+        font-size: 0.85rem !important; /* Smaller base font */
+    }
+
+    /* 2. Scale down the Headers */
+    .airport-board thead th {
+        font-size: 0.8rem !important;
+        padding: 4px 2px !important;
+    }
+
+    /* 3. Re-adjust column widths for tight spaces */
+    .airport-board .table th:nth-child(1),
+    .airport-board .table td:nth-child(1) {
+        width: 40%; /* Name column gets the most space */
+    }
+
+    .airport-board .table th:nth-child(2),
+    .airport-board .table td:nth-child(2) {
+        width: 100px !important; /* Status column shrinks */
+    }
+
+    .airport-board .table th:nth-child(3),
+    .airport-board .table td:nth-child(3) {
+        width: 80px !important; /* Star column shrinks */
+    }
+
+    /* 4. Shrink the stars so they stay on one line */
+    .star-rating {
+        font-size: 0.75rem !important;
+        letter-spacing: 0px !important;
+    }
+
+    /* 5. Reduce padding inside cells to save horizontal space */
+    .airport-board .table td, 
+    .airport-board .table th {
+        padding: 5px 2px !important;
+    }
+}
+
+/* Styling for the summary footer */
+.airport-board tfoot td {
+    background-color: #292315 !important;
+    vertical-align: middle;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+/* Ensure mobile responsiveness for the footer */
+@media (max-width: 767px) {
+    .airport-board tfoot td {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Set all columns to 1/3 width */
+    .airport-board .table th, 
+    .airport-board .table td {
+        width: 33.33% !important;
+        text-align: center; /* Center Status and Stars */
+        vertical-align: middle;
+    }
+
+    /* Specifically force the first column (Pasager) to stay left-aligned */
+    .airport-board .table th:first-child,
+    .airport-board .table td:first-child {
+        text-align: left !important;
+        padding-left: 20px !important; /* Optional: adds a little breathing room from the edge */
+    }
+}
