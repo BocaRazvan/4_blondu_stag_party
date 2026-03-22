@@ -827,7 +827,7 @@
 <section class="container my-5">
   <div class="card shadow-lg border-0 overflow-hidden">
     <div class="row g-0">
-      <div class="col-md-4 d-flex align-items-center p-5 myVote1">
+      <div class="col-md-4 d-flex align-items-center p-5 myVote1 ">
         <div>
           <h2 class="display-5 fw-bold mb-2">Voteaza destinatia!</h2>
           <p class="lead mb-3">Unde ai vrea sa mergem?<br>Ajuta-ne sa decidem!<br>Citeste regulamentul si exprima-te!
@@ -922,8 +922,40 @@
   </div>
 </div>
 
+<!--MESSAGE / VIEW MESSAGES -->
+<div class="container d-flex flex-column flex-md-row justify-content-evenly mb-4 gap-3">
+  <div class="col-md-5 border rounded-3 p-1 myForm">
+    <form id="feedbackForm" onsubmit="event.preventDefault();">
+      <div class="mb-1">
+        <h2 class="form-label d-block text-center h4">Lasă un mesaj</h2>
+        <label for="nume" class="form-label h6">Nume</label>
+        <input type="text" name="nume" class="form-control" id="nume" placeholder="Ion Ionescu" maxlength="30" required>
+      </div>
+      <div class="mb-1">
+        <label for="email" class="form-label h6">E-mail</label>
+        <input type="email" name="email" class="form-control" id="email" placeholder="email@exemplu.com" maxlength="30" required>
+      </div>
+      <div class="mb-1">
+        <label for="mesaj" class="form-label h6">Mesaj</label>
+        <textarea name="mesaj" class="form-control" id="mesaj" rows="3" maxlength="100" minlength="3" 
+        placeholder="Mesajul tau aici... maxim 100 caractere" required></textarea>
+        <div id="charCounter" class="form-text text-end text-warning">
+          0 / 100 caractere
+       </div>
+      </div>
+<div class="d-grid mt-3">
+    <button id="submitBtn" class="btn btn-primary" type="submit">Posteaza mesajul</button>
+  </div>
+    </form>
+  </div>
 
-
+  <div class="col-md-7 border rounded-3 p-1 myForm">
+    <h2 class="text-center mb-3 h4">Panou de mesaje</h2>
+    <div id="messagesContainer">
+        <p class="text-center text-white-50">Se încarcă mesajele...</p>
+    </div>
+  </div>
+</div>
 
 <!--JS-------------------------------------------------------------------------------------------------------------------------------------->
 <!--JS-------------------------------------------------------------------------------------------------------------------------------------->
@@ -1074,6 +1106,123 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("A apărut o eroare neprevăzută.");
     }
   });
+</script>
+
+<!--MESSAGE--------------------------------------------------------------------------------------------------------------------------->
+<script>
+// This "Immediate Function" creates a private scope to avoid "Already Declared" errors
+(function() {
+    // These names are now private to this block and won't clash with your other code
+    const URL = 'https://hzwarfzfdcrgrugvbxjm.supabase.co';
+    const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6d2FyZnpmZGNyZ3J1Z3ZieGptIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwMjg1NjksImV4cCI6MjA4OTYwNDU2OX0.8H9jZ_AbH8WFfcM2CRVXrzAnFZDZnU1zbMm7W4YVxvo';
+
+    // 1. Function to Load Messages
+    async function fetchMessages() {
+        const container = document.getElementById('messagesContainer');
+        if (!container) return;
+
+        try {
+            const response = await fetch(`${URL}/rest/v1/messages?select=*&order=created_at.desc`, {
+                headers: { 
+                    'apikey': KEY, 
+                    'Authorization': `Bearer ${KEY}` 
+                }
+            });
+            const messages = await response.json();
+
+            if (!messages || messages.length === 0) {
+                container.innerHTML = '<p class="text-center text-white-50">Niciun mesaj momentan.</p>';
+                return;
+            }
+
+            container.innerHTML = messages.map(msg => `
+<div class="card message-card text-white mb-3 shadow-sm">
+        <div class="card-body p-3">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="d-flex align-items-center">
+                    <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-2" 
+                         style="width: 30px; height: 30px; font-size: 0.8rem; font-weight: bold;">
+                        ${msg.nume.charAt(0).toUpperCase()}
+                    </div>
+                    <h6 class="card-title mb-0 text-black">${msg.nume}</h6>
+                </div>
+                <span class="badge rounded-pill bg-dark text-white border border-secondary" style="font-size: 0.7rem;">
+                    ${new Date(msg.created_at).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} 
+                    · ${new Date(msg.created_at).toLocaleDateString()}
+                </span>
+            </div>
+            <p class="card-text text-dark small mb-0" style="line-height: 1.4; opacity: 0.9;">
+                ${msg.mesaj}
+            </p>
+        </div>
+    </div>
+            `).join('');
+        } catch (err) {
+            console.error("Fetch Error:", err);
+        }
+    }
+
+    // 2. Initialize Event Listeners
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('feedbackForm');
+        const charCounter = document.getElementById('charCounter');
+        const mesajInput = document.getElementById('mesaj');
+        const submitBtn = document.getElementById('submitBtn');
+
+        // Character Counter Logic
+        if (mesajInput && charCounter) {
+            mesajInput.addEventListener('input', () => {
+                charCounter.innerText = `${mesajInput.value.length} / 100 caractere`;
+            });
+        }
+
+        // Form Submit Logic
+        if (form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault(); // This is now safe from syntax errors!
+
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Se trimite...';
+
+                const data = {
+                    nume: document.getElementById('nume').value,
+                    email: document.getElementById('email').value,
+                    mesaj: document.getElementById('mesaj').value
+                };
+
+                try {
+                    const response = await fetch(`${URL}/rest/v1/messages`, {
+                        method: 'POST',
+                        headers: {
+                            'apikey': KEY,
+                            'Authorization': `Bearer ${KEY}`,
+                            'Content-Type': 'application/json',
+                            'Prefer': 'return=minimal'
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    if (response.ok) {
+                        alert('Mesaj trimis cu succes! ✅');
+                        form.reset();
+                        charCounter.innerText = "0 / 100 caractere";
+                        fetchMessages(); // Refresh the list
+                    } else {
+                        const err = await response.json();
+                        alert("Eroare: " + err.message);
+                    }
+                } catch (error) {
+                    alert("Eroare de conexiune: " + error.message);
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "Posteaza mesajul";
+                }
+            });
+        }
+
+        fetchMessages();
+    });
+})();
 </script>
 
 </body>
