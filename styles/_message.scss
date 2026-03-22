@@ -54,9 +54,12 @@
 }
 
 #messagesContainer {
-    max-height: 300px;
-    overflow-y: auto;
-    padding-right: 5px;
+height: 300px; 
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    padding-right: 10px;
+    display: block; /* Ensures it behaves as a box, not a flex item */
+    -webkit-overflow-scrolling: touch; /* Makes scrolling smooth on iPhones */
 }
 
 /* Custom Scrollbar for a cleaner look */
