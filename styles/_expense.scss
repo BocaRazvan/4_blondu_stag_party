@@ -1,0 +1,52 @@
+/* Container and Centering */
+.finance-table-container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Safety wrapper for horizontal scroll on tiny screens */
+.table-responsive-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.custom-finance-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    font-family: sans-serif;
+    font-size: 16px; /* Desktop size */
+}
+
+.custom-finance-table th, 
+.custom-finance-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #d51d1d;
+    text-align: left;
+}
+
+.custom-finance-table thead {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #a01f1f;
+}
+
+/* --- MOBILE SPECIFIC STYLES --- */
+@media screen and (max-width: 600px) {
+    .custom-finance-table {
+        font-size: 11px; /* Significantly smaller font for mobile */
+    }
+
+    .custom-finance-table th, 
+    .custom-finance-table td {
+        padding: 8px 4px; /* Tiny padding to save space */
+        word-break: break-word; /* Prevents long text from pushing columns out */
+    }
+
+    /* Set approximate widths to keep it balanced */
+    .col-finance-name     { width: 25%; }
+    .col-finance-amount   { width: 15%; }
+    .col-finance-currency { width: 15%; }
+    .col-finance-expense  { width: 20%; }
+    .col-finance-obs      { width: 25%; }
+}

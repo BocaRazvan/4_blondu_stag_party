@@ -1,0 +1,62 @@
+/* 1. Container setup for 3D depth */
+.row {
+  perspective: 1200px;
+}
+
+/* 2. Base Card Animation */
+.fun-rule-card {
+  opacity: 0;
+  transform: scale(0.1) rotateY(1080deg);
+  /* Added background-color and color to the transition list */
+  transition: 
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1), 
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.fun-rule-card.is-visible {
+  opacity: 1;
+  transform: scale(1) rotateY(0deg);
+}
+
+/* 3. The Vault Card: Colors & Pulse */
+/* Ensure you add the class 'vault-card' to the HTML div */
+.vault-card.is-visible {
+  background-color: #ff0000 !important; /* Dark Background */
+  color: #ffffff !important;           /* White Text */
+}
+
+/* Target the header and paragraph inside the vault card for the pulse */
+.vault-card.is-visible h5,
+.vault-card.is-visible p {
+  color: #ffffff !important;
+  /* Apply the pulse animation */
+  animation: discretePulse 3s ease-in-out infinite;
+}
+
+/* 4. The Blur Effect (Paragraph Only) */
+.vault-card p {
+  filter: blur(5px);
+  transition: filter 9s ease;
+}
+
+.vault-card:hover p {
+  filter: blur(0);
+}
+
+/* 5. The Pulse Animation Keyframes */
+@keyframes discretePulse {
+  0% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 0.7; /* Slight fade for the 'discrete' feel */
+    transform: scale(0.98); /* Very subtle shrink */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
